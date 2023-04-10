@@ -16,6 +16,20 @@ for d in data:
 	sum_len = sum_len + len(d)
 print ('平均是', sum_len / len(data) )
 
+# 假設我們要篩選出長度小於100的留言
+new = [] #建立一個新清單
+for d in data: # 將data一筆一筆列出來
+	if len(d) < 100:
+		new.append(d)
+print ('一共有 ', len(new) , '筆留言')
+print (new[0]) #印出第0筆留言
+
+# 篩選出含有good的留言
+good = []
+for d in data:
+	if 'good' in (d):#if後慢一定會變是非題 true false
+		good.append(d)
+print('一共有' ,len(good) , '個留言含有good')
 # 1.首先 先建立一個能開啟reviews.txt檔案的程式碼
 # 2.將檔案存成f(隨便取)
 # 3.利用for迴圈，將f 每次都讀取一行(line)
